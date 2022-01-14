@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Predictor</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper deep-purple">
+          <a href="#" class="brand-logo">&nbsp; Marks Predictor</a>
+        </div>
+    </nav>
+
+    <h3 class="center-align">Marks Prediction using Machine Learning</h3>
+
+    <br>
+
+    <div class="row">
+        <form class="col s10 m7 l4" method="post" action="/">
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="hours" name="hours" type="text" class="validate">
+                <label for="hours">Enter no. of hours:</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light deep-purple darken-4" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+    </div>
+    <br>
+    <div>
+      <div class="center-align">
+        {% if predicted_marks %}
+
+          <h4>&nbsp; Predicted Marks: {{ predicted_marks }} &nbsp;</h4>
+
+        {% else %}
+
+          <h4>&nbsp; Enter the Number of Hours You Studied &nbsp;</h4>
+
+        {% endif %}
+        <br><br>
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>This application is built using a Machine Learning Model which predicts the expected marks if we enter the number of hours a person has studied. 
+                The Machine Larning Model is already trained using Linear Regression. For code please click on the below mentioned link.
+              </p>
+            </div>
+            <div class="card-action ">
+              <a href="https://github.com/LiteshGhute/Marks-Predictor-Using-Machine-Learning" target="_blank" style="color: #311b92; text-decoration: underline;">Click here for code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
